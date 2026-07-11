@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * 配色: 生成り(和紙)ベース + 墨のダークトーン + 燈色/朱の差し色
+ * Tailwind v4 の @theme トークン。bg-washi / text-sumi / text-akari 等の
+ * ユーティリティとして利用できる。
+ */
+@theme {
+  --color-washi: #f7f1e5;
+  --color-washi-deep: #efe6d2;
+  --color-kinari-line: #ddd2b8;
+  --color-sumi: #26221b;
+  --color-sumi-light: #514a3e;
+  --color-akari: #d97f30;
+  --color-shu: #b0432c;
+  --font-mincho: var(--font-shippori-mincho), "Hiragino Mincho ProN", serif;
+  --font-gothic: var(--font-noto-sans-jp), "Hiragino Kaku Gothic ProN", "Malgun Gothic", "PingFang TC", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-washi);
+  color: var(--color-sumi);
+  font-family: var(--font-gothic);
+  /* 和紙のごく薄い質感(SVGノイズ)。重い画像を使わずに紙の風合いを出す */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.4 0 0 0 0 0.3 0 0 0 0.04 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+}
+
+::selection {
+  background-color: var(--color-akari);
+  color: var(--color-washi);
 }

@@ -1,0 +1,26 @@
+{
+  "name": "食酒房 客炉留",
+  "reading": "きゃくろとめ",
+  "alias": "キャロル",
+  "aliasRomaji": "Carol",
+  "postalCode": "418-0077",
+  "address": {
+    "ja": "〒418-0077 静岡県富士宮市東町22-11",
+    "en": "22-11 Higashicho, Fujinomiya, Shizuoka 418-0077, Japan",
+    "zh-TW": "〒418-0077 靜岡縣富士宮市東町22-11",
+    "ko": "〒418-0077 시즈오카현 후지노미야시 히가시초 22-11"
+  },
+  "phoneDisplay": "0544-26-0730",
+  "phoneTel": "+81544260730",
+  "instagramUrl": "https://www.instagram.com/carol20030802/",
+  "instagramHandle": "@carol20030802",
+  "geo": {
+    "latitude": 35.2224731,
+    "longitude": 138.6164551
+  },
+  "links": {
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=35.2224731,138.6164551",
+    "mapEmbed": "https://maps.google.com/maps?q=35.2224731,138.6164551&z=17&output=embed"
+  },
+  "_todo": "営業時間・定休日・席数・個室・貸切・駐車場・予算感・各メニュー価格は未確認。確定したら data/i18n.json の info セクションと README の TODO 一覧を更新すること。"
+}

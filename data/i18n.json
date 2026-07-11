@@ -1,0 +1,375 @@
+{
+  "_readme": "多言語テキストの辞書。言語を追加するときは ja のブロックを丸ごとコピーして翻訳し、lib/types.ts の Lang と lib/i18n.tsx の LANGS / LANG_LABELS に言語コードを足す。TODO: 要確認 — info.hoursValue / info.closedValue は2013年頃の参考値。",
+  "ja": {
+    "header": {
+      "about": "お店について",
+      "menu": "お品書き",
+      "access": "アクセス"
+    },
+    "hero": {
+      "genre": "和風居酒屋・食酒房",
+      "reading": "きゃくろとめ",
+      "catch": "友達の家に遊びに行くような、気軽なひとときを。",
+      "lead": "富士山本宮浅間大社のほど近く。富士宮の路地にともる、小さな食酒房です。",
+      "call": "電話をかける",
+      "instagram": "Instagramを見る",
+      "imageAlt": "提灯の灯りがともる和風居酒屋の店内イメージ"
+    },
+    "about": {
+      "heading": "お店について",
+      "body1": "「客炉留」と書いて、キャロル。静岡県富士宮市で、地元の皆さまに支えられてきた小さな和風居酒屋です。",
+      "body2": "めざしているのは、友達の家に遊びに行くような感覚で、ふらっと立ち寄れるお店。カウンター越しのおしゃべりと、家庭的な手づくりの味で、今日の疲れをほどいてください。",
+      "body3": "富士山のふもと、浅間大社の門前町・富士宮。観光でお越しの方も、どうぞ気軽にのれんをくぐってください。"
+    },
+    "signatures": {
+      "heading": "自慢の一品",
+      "lead": "定番の手づくり料理と、その日だけの一皿。",
+      "photoNote": "※写真はイメージです。"
+    },
+    "menu": {
+      "heading": "お品書き",
+      "lead": "お酒に合う手づくりの味を、気取らずに。",
+      "categories": {
+        "food": "お料理",
+        "drinks": "お飲み物"
+      },
+      "priceNote": "※価格・内容は仕入れ等により変わります。くわしくは店頭でおたずねください。",
+      "emptyCategory": "ただいま準備中です。"
+    },
+    "instagram": {
+      "heading": "日替わりメニューはInstagramで",
+      "body": "その日のおすすめ一品や営業のお知らせは、Instagramで発信しています。ご来店前にぜひチェックしてください。",
+      "action": "Instagramをフォローする"
+    },
+    "info": {
+      "heading": "店舗情報",
+      "rows": {
+        "name": "店名",
+        "genre": "ジャンル",
+        "address": "住所",
+        "phone": "電話",
+        "hours": "営業時間",
+        "closed": "定休日",
+        "station": "最寄駅"
+      },
+      "nameValue": "食酒房 客炉留（きゃくろとめ／通称：キャロル）",
+      "genreValue": "和風居酒屋・食酒房",
+      "hoursValue": "18:00〜24:00",
+      "closedValue": "日曜・祝日",
+      "stationValue": "JR身延線「富士宮駅」",
+      "note": "※営業時間・定休日は変更となる場合があります。最新情報はお電話またはInstagramでご確認ください。",
+      "openMap": "地図アプリで開く"
+    },
+    "access": {
+      "heading": "アクセス",
+      "lead": "富士山本宮浅間大社のすぐ近く。観光の行き帰りに、ふらりとお立ち寄りください。",
+      "routes": [
+        {
+          "title": "電車でお越しの方",
+          "body": "JR身延線「富士宮駅」から徒歩10〜15分ほど（目安）です。"
+        },
+        {
+          "title": "富士山本宮浅間大社から",
+          "body": "参拝のあとに徒歩10分ほど（目安）。お宮横丁の食べ歩きとあわせて、夜は当店でゆっくりどうぞ。"
+        },
+        {
+          "title": "新幹線でお越しの方",
+          "body": "東海道新幹線「新富士駅」からタクシーで約20分（目安）。または「三島駅」「静岡駅」から在来線で「富士駅」へ、JR身延線に乗り換えて「富士宮駅」下車。"
+        },
+        {
+          "title": "お車でお越しの方",
+          "body": "新東名「新富士IC」・東名「富士IC」から市街地へ約15〜20分（目安）。駐車場についてはお電話でご確認ください。"
+        },
+        {
+          "title": "富士山観光の帰りに",
+          "body": "富士宮口五合目や白糸の滝からの帰り道に。富士宮の夜は、地元の居酒屋で一杯いかがですか。"
+        }
+      ],
+      "mapTitle": "食酒房 客炉留の地図",
+      "openMap": "Googleマップで開く"
+    },
+    "footer": {
+      "tagline": "静岡県富士宮市・浅間大社近くの和風居酒屋",
+      "photoNote": "掲載の写真はイメージです。"
+    }
+  },
+  "en": {
+    "header": {
+      "about": "About",
+      "menu": "Menu",
+      "access": "Access"
+    },
+    "hero": {
+      "genre": "Japanese Izakaya",
+      "reading": "Kyakurotome",
+      "catch": "Drop by like you're visiting a friend's home.",
+      "lead": "A small local izakaya just a short walk from Fujisan Hongu Sengen Taisha Shrine in Fujinomiya.",
+      "call": "Call us",
+      "instagram": "See Instagram",
+      "imageAlt": "Cozy Japanese izakaya interior lit by paper lanterns"
+    },
+    "about": {
+      "heading": "About Us",
+      "body1": "Written \"客炉留\" and read \"Kyakurotome\" — everyone just calls us Carol. We are a small Japanese izakaya in Fujinomiya, Shizuoka, loved by locals for years.",
+      "body2": "We aim to be a place you can drop into as casually as a friend's house. Chat with us across the counter and unwind over honest, home-style cooking.",
+      "body3": "Fujinomiya is the shrine town at the foot of Mt. Fuji, home to Sengen Taisha. Travelers are always welcome — just slip through the noren curtain."
+    },
+    "signatures": {
+      "heading": "Our Specialties",
+      "lead": "Handmade favorites, plus a dish of the day.",
+      "photoNote": "Photos are for illustration purposes."
+    },
+    "menu": {
+      "heading": "Menu",
+      "lead": "Honest, handmade dishes that go well with a drink.",
+      "categories": {
+        "food": "Food",
+        "drinks": "Drinks"
+      },
+      "priceNote": "Prices and items may vary with the day's market — please ask at the counter.",
+      "emptyCategory": "Coming soon."
+    },
+    "instagram": {
+      "heading": "Daily Specials on Instagram",
+      "body": "We post the day's specials and schedule updates on Instagram. Take a look before you visit!",
+      "action": "Follow us on Instagram"
+    },
+    "info": {
+      "heading": "Information",
+      "rows": {
+        "name": "Name",
+        "genre": "Type",
+        "address": "Address",
+        "phone": "Phone",
+        "hours": "Hours",
+        "closed": "Closed",
+        "station": "Nearest Station"
+      },
+      "nameValue": "Shokushubo Kyakurotome (\"Carol\")",
+      "genreValue": "Japanese izakaya",
+      "hoursValue": "6:00 p.m. – midnight",
+      "closedValue": "Sundays & national holidays",
+      "stationValue": "Fujinomiya Station (JR Minobu Line)",
+      "note": "Hours and closing days may change — please check by phone or Instagram before visiting.",
+      "openMap": "Open in Maps"
+    },
+    "access": {
+      "heading": "Access",
+      "lead": "Just steps from Fujisan Hongu Sengen Taisha Shrine — stop by on your way to or from sightseeing.",
+      "routes": [
+        {
+          "title": "By Train",
+          "body": "About a 10–15 minute walk from Fujinomiya Station on the JR Minobu Line (approx.)."
+        },
+        {
+          "title": "From Sengen Taisha Shrine",
+          "body": "Roughly a 10-minute walk from the shrine (approx.). Perfect for dinner and drinks after your visit."
+        },
+        {
+          "title": "By Shinkansen",
+          "body": "About 20 minutes by taxi from Shin-Fuji Station (approx.), or take a local train from Mishima or Shizuoka to Fuji Station and transfer to the JR Minobu Line for Fujinomiya Station."
+        },
+        {
+          "title": "By Car",
+          "body": "About 15–20 minutes from Shin-Fuji IC (Shin-Tomei Expwy) or Fuji IC (Tomei Expwy) (approx.). Please call us about parking."
+        },
+        {
+          "title": "After Mt. Fuji Sightseeing",
+          "body": "On your way back from the Fujinomiya 5th Station or Shiraito Falls, wind down with a drink at a local izakaya."
+        }
+      ],
+      "mapTitle": "Map of Shokushubo Kyakurotome (Carol)",
+      "openMap": "Open in Google Maps"
+    },
+    "footer": {
+      "tagline": "A local izakaya near Sengen Taisha Shrine, Fujinomiya, Shizuoka",
+      "photoNote": "Photos are for illustration purposes."
+    }
+  },
+  "zh-TW": {
+    "header": {
+      "about": "關於本店",
+      "menu": "菜單",
+      "access": "交通方式"
+    },
+    "hero": {
+      "genre": "日式居酒屋",
+      "reading": "Kyakurotome",
+      "catch": "像到朋友家作客般，輕鬆自在的小店。",
+      "lead": "距離富士山本宮淺間大社步行不遠，藏身於富士宮巷弄的小小食酒房。",
+      "call": "撥打電話",
+      "instagram": "查看 Instagram",
+      "imageAlt": "掛著紙燈籠、氣氛溫暖的日式居酒屋店內"
+    },
+    "about": {
+      "heading": "關於本店",
+      "body1": "「客炉留」讀作「Carol（キャロル）」，是位於靜岡縣富士宮市、深受在地人喜愛的小小日式居酒屋。",
+      "body2": "我們希望這裡是一間能像去朋友家作客般隨性造訪的店。隔著吧檯聊聊天，配上家常手作料理，放下一天的疲憊。",
+      "body3": "富士宮是富士山腳下、淺間大社的門前町。觀光旅途中的您，也請輕鬆推開門進來坐坐。"
+    },
+    "signatures": {
+      "heading": "招牌料理",
+      "lead": "常備的手作料理，加上每日限定的一皿。",
+      "photoNote": "※圖片僅供參考。"
+    },
+    "menu": {
+      "heading": "菜單",
+      "lead": "下酒的手作好味道。",
+      "categories": {
+        "food": "料理",
+        "drinks": "飲品"
+      },
+      "priceNote": "※價格與內容可能因進貨而調整，詳情請於店內詢問。",
+      "emptyCategory": "準備中。"
+    },
+    "instagram": {
+      "heading": "每日限定菜單請看 Instagram",
+      "body": "當日推薦料理與營業資訊都會在 Instagram 上發布，來店前歡迎先看看。",
+      "action": "追蹤我們的 Instagram"
+    },
+    "info": {
+      "heading": "店家資訊",
+      "rows": {
+        "name": "店名",
+        "genre": "類型",
+        "address": "地址",
+        "phone": "電話",
+        "hours": "營業時間",
+        "closed": "公休日",
+        "station": "最近車站"
+      },
+      "nameValue": "食酒房 客炉留（通稱：Carol／キャロル）",
+      "genreValue": "日式居酒屋",
+      "hoursValue": "18:00–24:00",
+      "closedValue": "週日・國定假日",
+      "stationValue": "JR身延線「富士宮站」",
+      "note": "※營業時間與公休日可能變動，來店前請以電話或 Instagram 確認最新資訊。",
+      "openMap": "用地圖 App 開啟"
+    },
+    "access": {
+      "heading": "交通方式",
+      "lead": "就在富士山本宮淺間大社附近，觀光途中歡迎順道來坐坐。",
+      "routes": [
+        {
+          "title": "搭電車",
+          "body": "從 JR 身延線「富士宮站」步行約 10–15 分鐘（僅供參考）。"
+        },
+        {
+          "title": "從富士山本宮淺間大社",
+          "body": "參拜後步行約 10 分鐘（僅供參考）。逛完表參道，晚上來店裡小酌一杯吧。"
+        },
+        {
+          "title": "搭新幹線",
+          "body": "從東海道新幹線「新富士站」搭計程車約 20 分鐘（僅供參考）；或從「三島站」「靜岡站」搭在來線至「富士站」，轉乘 JR 身延線在「富士宮站」下車。"
+        },
+        {
+          "title": "自駕",
+          "body": "從新東名「新富士IC」或東名「富士IC」前往市區約 15–20 分鐘（僅供參考）。停車資訊請來電洽詢。"
+        },
+        {
+          "title": "富士山觀光回程",
+          "body": "從富士宮口五合目、白絲瀑布返程途中，歡迎順道來店，用在地居酒屋為旅程畫下句點。"
+        }
+      ],
+      "mapTitle": "食酒房 客炉留的地圖",
+      "openMap": "以 Google 地圖開啟"
+    },
+    "footer": {
+      "tagline": "位於靜岡縣富士宮市、淺間大社附近的日式居酒屋",
+      "photoNote": "刊登圖片僅供參考。"
+    }
+  },
+  "ko": {
+    "header": {
+      "about": "소개",
+      "menu": "메뉴",
+      "access": "오시는 길"
+    },
+    "hero": {
+      "genre": "일본식 이자카야",
+      "reading": "캬쿠로토메",
+      "catch": "친구 집에 놀러 가듯, 부담 없이 들러 주세요.",
+      "lead": "후지산 혼구 센겐타이샤에서 가까운, 후지노미야 골목의 작은 이자카야입니다.",
+      "call": "전화 걸기",
+      "instagram": "인스타그램 보기",
+      "imageAlt": "종이 등불이 켜진 아늑한 일본식 이자카야 내부"
+    },
+    "about": {
+      "heading": "가게 소개",
+      "body1": "'客炉留(캬쿠로토메)'라 쓰고 '캐럴'이라 부릅니다. 시즈오카현 후지노미야시에서 오랫동안 지역 주민들의 사랑을 받아온 작은 이자카야입니다.",
+      "body2": "친구 집에 놀러 가듯 편하게 들를 수 있는 가게가 되고자 합니다. 카운터 너머로 나누는 대화와 정겨운 가정식 요리로 하루의 피로를 풀어 보세요.",
+      "body3": "후지산 기슭, 센겐타이샤의 문전 마을 후지노미야. 여행 중이신 분들도 부담 없이 들러 주세요."
+    },
+    "signatures": {
+      "heading": "대표 메뉴",
+      "lead": "손맛 가득한 단골 메뉴와 그날만의 한 접시.",
+      "photoNote": "※사진은 이미지컷입니다."
+    },
+    "menu": {
+      "heading": "메뉴",
+      "lead": "술과 잘 어울리는, 손수 만든 요리.",
+      "categories": {
+        "food": "요리",
+        "drinks": "음료"
+      },
+      "priceNote": "※가격과 메뉴는 사정에 따라 바뀔 수 있습니다. 자세한 내용은 매장에서 문의해 주세요.",
+      "emptyCategory": "준비 중입니다."
+    },
+    "instagram": {
+      "heading": "오늘의 메뉴는 인스타그램에서",
+      "body": "그날의 추천 요리와 영업 안내는 인스타그램에서 알려 드립니다. 방문 전에 확인해 보세요.",
+      "action": "인스타그램 팔로우하기"
+    },
+    "info": {
+      "heading": "매장 정보",
+      "rows": {
+        "name": "상호",
+        "genre": "업종",
+        "address": "주소",
+        "phone": "전화",
+        "hours": "영업시간",
+        "closed": "휴무일",
+        "station": "가까운 역"
+      },
+      "nameValue": "쇼쿠슈보 캬쿠로토메(통칭: 캐럴)",
+      "genreValue": "일본식 이자카야",
+      "hoursValue": "18:00~24:00",
+      "closedValue": "일요일·공휴일",
+      "stationValue": "JR 미노부선 '후지노미야역'",
+      "note": "※영업시간과 휴무일은 변경될 수 있습니다. 방문 전 전화 또는 인스타그램으로 확인해 주세요.",
+      "openMap": "지도 앱으로 열기"
+    },
+    "access": {
+      "heading": "오시는 길",
+      "lead": "후지산 혼구 센겐타이샤 바로 근처. 관광 오가는 길에 편하게 들러 주세요.",
+      "routes": [
+        {
+          "title": "전철로 오시는 길",
+          "body": "JR 미노부선 '후지노미야역'에서 도보 약 10~15분(참고용)."
+        },
+        {
+          "title": "센겐타이샤에서",
+          "body": "참배 후 도보 약 10분(참고용). 신사 관광을 마친 저녁, 한잔하기 좋습니다."
+        },
+        {
+          "title": "신칸센으로 오시는 길",
+          "body": "도카이도 신칸센 '신후지역'에서 택시로 약 20분(참고용). 또는 '미시마역'·'시즈오카역'에서 재래선으로 '후지역'까지 이동한 뒤 JR 미노부선으로 환승, '후지노미야역' 하차."
+        },
+        {
+          "title": "자동차로 오시는 길",
+          "body": "신토메이 '신후지IC' 또는 토메이 '후지IC'에서 시내까지 약 15~20분(참고용). 주차는 전화로 문의해 주세요."
+        },
+        {
+          "title": "후지산 관광 후에",
+          "body": "후지노미야구치 5부 능선이나 시라이토 폭포에서 돌아가는 길에, 현지 이자카야에서 하루를 마무리하세요."
+        }
+      ],
+      "mapTitle": "쇼쿠슈보 캬쿠로토메(캐럴) 지도",
+      "openMap": "구글 지도로 열기"
+    },
+    "footer": {
+      "tagline": "시즈오카현 후지노미야시, 센겐타이샤 근처의 이자카야",
+      "photoNote": "게재된 사진은 이미지컷입니다."
+    }
+  }
+}
