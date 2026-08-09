@@ -17,7 +17,7 @@ export default function Signatures() {
   const { t, lang } = useI18n();
 
   const featured: readonly MenuItem[] = menu.categories.flatMap((category) =>
-    category.items.filter((item) => item.featured && item.image),
+    (category.items ?? []).filter((item) => item.featured && item.image),
   );
 
   return (

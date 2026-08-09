@@ -1,5 +1,5 @@
 {
-  "_readme": "当店は固定のグランドメニューを持たず、その日の仕入れでいちばん良い料理を出すスタイルのため、items は現在すべて空にしてある(画面には代わりにモットー訴求のコピーが表示される — components/Signatures.tsx, components/MenuSection.tsx 参照)。実際のメニュー(特にドリンク)が決まり次第、このカテゴリ構造はそのままに items へ追記すれば自動で一覧表示に切り替わる。price は円の数値(未定は null で非表示)。featured: true かつ image ありの品は写真つきで「自慢の一品」にも表示される。",
+  "_readme": "お料理は固定のグランドメニューを持たず、その日の仕入れでいちばん良い料理を出すスタイルのため items は空のまま(画面にはモットー訴求のコピーが表示される — components/Signatures.tsx, components/MenuSection.tsx 参照)。実際の料理メニューが決まり次第、food.items に追記すれば一覧表示に切り替わる。お飲み物は groups(カテゴリ内グループ)構造で実メニューを掲載中。1品に複数価格(中/大、グラス/ボトル等)を持たせたい場合は price を prices: [{label, price}, ...] の配列で追加し、フレーバーを並べるだけのカテゴリは flavors 配列 + headingNote(「各500円」等)を使う。価格はすべて税込。",
   "categories": [
     {
       "id": "food",
@@ -7,7 +7,195 @@
     },
     {
       "id": "drinks",
-      "items": []
+      "groups": [
+        {
+          "id": "beer",
+          "heading": { "ja": "ビール", "en": "Beer", "ko": "맥주" },
+          "items": [
+            {
+              "id": "draft-beer",
+              "name": { "ja": "生ビール", "en": "Draft Beer", "ko": "생맥주" },
+              "prices": [
+                { "label": { "ja": "中", "en": "Regular", "ko": "중" }, "price": 500 },
+                { "label": { "ja": "大", "en": "Large", "ko": "대" }, "price": 800 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "taruhai",
+          "heading": { "ja": "樽ハイ", "en": "Taru-hai", "ko": "타루하이" },
+          "headingNote": { "ja": "各500円", "en": "500円 each", "ko": "각 500円" },
+          "flavors": [
+            { "ja": "オレンジ", "en": "Orange", "ko": "오렌지" },
+            { "ja": "トマト", "en": "Tomato", "ko": "토마토" },
+            { "ja": "ザクロ", "en": "Pomegranate", "ko": "석류" },
+            { "ja": "コーラ", "en": "Cola", "ko": "콜라" },
+            { "ja": "梅", "en": "Plum", "ko": "매실" },
+            { "ja": "イチゴ", "en": "Strawberry", "ko": "딸기" },
+            { "ja": "グレープフルーツ", "en": "Grapefruit", "ko": "자몽" },
+            { "ja": "カルピス", "en": "Calpis", "ko": "칼피스" },
+            { "ja": "ブルーベリー", "en": "Blueberry", "ko": "블루베리" },
+            { "ja": "レモン", "en": "Lemon", "ko": "레몬" }
+          ]
+        },
+        {
+          "id": "cocktail",
+          "heading": { "ja": "カクテル", "en": "Cocktails", "ko": "칵테일" },
+          "headingNote": { "ja": "各500円〜", "en": "From 500円 each", "ko": "각 500円부터" },
+          "flavors": [
+            { "ja": "アペロール", "en": "Aperol", "ko": "아페롤" },
+            { "ja": "カシス", "en": "Cassis", "ko": "카시스" },
+            { "ja": "チュリーブランデー", "en": "Cherry Brandy", "ko": "체리 브랜디" },
+            { "ja": "カルア", "en": "Kahlúa", "ko": "칼루아" },
+            { "ja": "パッソア", "en": "Passoa", "ko": "파소아" }
+          ],
+          "note": {
+            "ja": "ロック・オレンジ・グレープフルーツ・ソーダ・ウーロン茶 などで割れます",
+            "en": "Can be mixed on the rocks, or with orange, grapefruit, soda, or oolong tea",
+            "ko": "록(스트레이트)・오렌지・자몽・소다・우롱차 등으로 만들어 드립니다"
+          }
+        },
+        {
+          "id": "wine",
+          "heading": { "ja": "ワイン", "en": "Wine", "ko": "와인" },
+          "items": [
+            {
+              "id": "glass-wine",
+              "name": { "ja": "グラスワイン（赤・白）", "en": "Glass Wine (Red / White)", "ko": "글라스 와인(레드・화이트)" },
+              "prices": [{ "price": 500 }]
+            }
+          ]
+        },
+        {
+          "id": "whisky",
+          "heading": { "ja": "ウイスキー", "en": "Whisky", "ko": "위스키" },
+          "items": [
+            {
+              "id": "kaku-highball",
+              "name": { "ja": "角ハイボール", "en": "Kaku Highball", "ko": "카쿠 하이볼" },
+              "prices": [
+                { "label": { "ja": "中", "en": "Regular", "ko": "중" }, "price": 500 },
+                { "label": { "ja": "大", "en": "Large", "ko": "대" }, "price": 900 }
+              ]
+            },
+            {
+              "id": "other-whisky",
+              "name": {
+                "ja": "その他ウイスキー（ロック・ソーダ割り）",
+                "en": "Other Whisky (On the Rocks / Soda)",
+                "ko": "기타 위스키(록・소다)"
+              },
+              "prices": [{ "price": 500, "from": true }]
+            }
+          ]
+        },
+        {
+          "id": "sake",
+          "heading": { "ja": "日本酒", "en": "Sake", "ko": "일본주" },
+          "items": [
+            {
+              "id": "reishu",
+              "name": { "ja": "冷酒", "en": "Reishu (Chilled Sake)", "ko": "레이슈(냉주)" },
+              "prices": [{ "label": { "ja": "グラス", "en": "Glass", "ko": "글라스" }, "price": 500, "from": true }]
+            },
+            {
+              "id": "atsukan",
+              "name": { "ja": "熱燗", "en": "Atsukan (Hot Sake)", "ko": "아츠캉(따뜻한 사케)" },
+              "prices": [
+                { "label": { "ja": "1合", "en": "1合", "ko": "1合" }, "price": 500, "from": true },
+                { "label": { "ja": "2合", "en": "2合", "ko": "2合" }, "price": 800, "from": true }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shochu",
+          "heading": { "ja": "焼酎", "en": "Shochu", "ko": "소주" },
+          "items": [
+            {
+              "id": "carol-shochu",
+              "name": { "ja": "キャロル（甲類）", "en": "キャロル（甲類）", "ko": "キャロル（甲類）" },
+              "prices": [
+                { "label": { "ja": "グラス", "en": "Glass", "ko": "글라스" }, "price": 440 },
+                { "label": { "ja": "ボトル", "en": "Bottle", "ko": "보틀" }, "price": 2500 }
+              ]
+            },
+            {
+              "id": "yumenoato-shochu",
+              "name": { "ja": "夢のあと（麦）", "en": "夢のあと（麦）", "ko": "夢のあと（麦）" },
+              "prices": [
+                { "label": { "ja": "グラス", "en": "Glass", "ko": "글라스" }, "price": 550 },
+                { "label": { "ja": "ボトル", "en": "Bottle", "ko": "보틀" }, "price": 3600 }
+              ]
+            },
+            {
+              "id": "surari-shochu",
+              "name": { "ja": "すらり（芋）", "en": "すらり（芋）", "ko": "すらり（芋）" },
+              "prices": [
+                { "label": { "ja": "グラス", "en": "Glass", "ko": "글라스" }, "price": 550 },
+                { "label": { "ja": "ボトル", "en": "Bottle", "ko": "보틀" }, "price": 3600 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "umeshu",
+          "heading": { "ja": "梅酒", "en": "Plum Wine", "ko": "매실주" },
+          "items": [
+            {
+              "id": "umeshu-glass",
+              "name": { "ja": "梅酒", "en": "Plum Wine", "ko": "매실주" },
+              "prices": [{ "label": { "ja": "グラス", "en": "Glass", "ko": "글라스" }, "price": 500 }]
+            }
+          ]
+        },
+        {
+          "id": "soft-drink",
+          "heading": { "ja": "ソフトドリンク", "en": "Soft Drinks", "ko": "소프트 드링크" },
+          "headingNote": { "ja": "各330円〜", "en": "From 330円 each", "ko": "각 330円부터" },
+          "flavors": [
+            { "ja": "ウーロン茶", "en": "Oolong Tea", "ko": "우롱차" },
+            { "ja": "お茶", "en": "Tea", "ko": "차" },
+            { "ja": "コーラ", "en": "Cola", "ko": "콜라" },
+            { "ja": "ジンジャーエール", "en": "Ginger Ale", "ko": "진저에일" },
+            { "ja": "オレンジ", "en": "Orange", "ko": "오렌지" },
+            { "ja": "グレープフルーツ", "en": "Grapefruit", "ko": "자몽" },
+            { "ja": "カルピス", "en": "Calpis", "ko": "칼피스" }
+          ]
+        },
+        {
+          "id": "warimono",
+          "heading": { "ja": "割り物", "en": "Mixers", "ko": "믹서" },
+          "items": [
+            {
+              "id": "ice",
+              "name": { "ja": "氷", "en": "Ice", "ko": "얼음" },
+              "prices": [{ "price": 220 }]
+            },
+            {
+              "id": "oolong-mixer",
+              "name": { "ja": "ウーロン茶", "en": "Oolong Tea", "ko": "우롱차" },
+              "prices": [{ "price": 330 }]
+            },
+            {
+              "id": "tea-mixer",
+              "name": { "ja": "お茶", "en": "Tea", "ko": "차" },
+              "prices": [{ "price": 330 }]
+            },
+            {
+              "id": "soda-mixer",
+              "name": { "ja": "ソーダ", "en": "Soda", "ko": "소다" },
+              "prices": [{ "price": 330, "from": true }]
+            },
+            {
+              "id": "fuji-water",
+              "name": { "ja": "富士山の水", "en": "Mt. Fuji Water", "ko": "후지산의 물" },
+              "prices": [{ "free": true }]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
