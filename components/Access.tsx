@@ -7,7 +7,7 @@ import site from "@/data/site.json";
 
 /**
  * アクセスセクション。各ルートの文面は data/i18n.json の access.routes(配列)。
- * TODO: 要確認 — 徒歩・車の所要時間はすべて概算。確定したら i18n.json を全言語ぶん更新する。
+ * TODO: 要確認 — 車での所要時間は概算。確定したら i18n.json を全言語ぶん更新する。
  */
 export default function Access() {
   const { t, dict } = useI18n();

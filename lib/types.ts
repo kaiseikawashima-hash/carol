@@ -1,11 +1,10 @@
 /** 対応言語。増やすときは data/i18n.json と lib/i18n.tsx の LANGS も更新する */
-export type Lang = "ja" | "en" | "zh-TW" | "ko";
+export type Lang = "ja" | "en" | "ko";
 
 /** 言語ごとのテキスト。メニュー名・説明などに使う */
 export interface LocalizedText {
   ja: string;
   en: string;
-  "zh-TW": string;
   ko: string;
 }
 

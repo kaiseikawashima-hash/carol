@@ -25,11 +25,11 @@ export default function Hero() {
         <p className="text-xs tracking-[0.4em] text-washi/85 sm:text-sm">{t("hero.genre")}</p>
 
         <h1 className="mt-6">
-          <span className="font-mincho block text-5xl font-semibold tracking-[0.12em] drop-shadow-md sm:text-6xl md:text-7xl">
+          <span className="font-mincho block text-4xl font-semibold tracking-[0.08em] break-keep drop-shadow-md sm:text-6xl sm:tracking-[0.12em] md:text-7xl">
             食酒房 客炉留
           </span>
-          <span className="mt-4 block text-sm tracking-[0.3em] text-washi/90 sm:text-base">
-            {t("hero.reading")} — {site.alias} / {site.aliasRomaji}
+          <span className="mt-4 block text-sm tracking-[0.3em] text-washi/90 break-keep sm:text-base">
+            {site.alias} / {site.aliasRomaji}
           </span>
         </h1>
 

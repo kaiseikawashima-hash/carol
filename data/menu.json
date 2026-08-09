@@ -1,116 +1,13 @@
 {
-  "_readme": "メニューはこのファイルだけを編集すれば画面に反映される。price は円の数値(未定は null で非表示)。featured: true の品は写真つきで「自慢の一品」にも表示される。TODO: 要確認 — 全品の価格が未確定のため null にしている。",
+  "_readme": "当店は固定のグランドメニューを持たず、その日の仕入れでいちばん良い料理を出すスタイルのため、items は現在すべて空にしてある(画面には代わりにモットー訴求のコピーが表示される — components/Signatures.tsx, components/MenuSection.tsx 参照)。実際のメニュー(特にドリンク)が決まり次第、このカテゴリ構造はそのままに items へ追記すれば自動で一覧表示に切り替わる。price は円の数値(未定は null で非表示)。featured: true かつ image ありの品は写真つきで「自慢の一品」にも表示される。",
   "categories": [
     {
       "id": "food",
-      "items": [
-        {
-          "id": "nikomi-hamburg",
-          "name": {
-            "ja": "煮込みハンバーグ",
-            "en": "Simmered Hamburg Steak",
-            "zh-TW": "燉煮漢堡排",
-            "ko": "니코미 함바그"
-          },
-          "description": {
-            "ja": "特製ソースでじっくり煮込んだ、当店の看板メニュー。",
-            "en": "Our signature dish — hamburg steak slowly simmered in our special sauce.",
-            "zh-TW": "以特製醬汁慢火燉煮的招牌料理。",
-            "ko": "특제 소스에 뭉근히 끓여낸 대표 메뉴."
-          },
-          "price": null,
-          "image": "/images/placeholder_hamburg.png",
-          "featured": true
-        },
-        {
-          "id": "motsuni",
-          "name": {
-            "ja": "お通しのモツ煮",
-            "en": "Motsu-ni (Simmered Offal Stew)",
-            "zh-TW": "燉煮內臟（開胃小菜）",
-            "ko": "모츠니(곱창 조림)"
-          },
-          "description": {
-            "ja": "まず一杯目のお供に。やわらかく炊いた名物のお通しです。",
-            "en": "Served as our welcome dish — tender, slow-simmered and full of flavor.",
-            "zh-TW": "作為開胃小菜上桌，燉得軟嫩入味的名物。",
-            "ko": "오토시(기본 안주)로 나오는, 부드럽게 푹 끓인 명물."
-          },
-          "price": null,
-          "image": "/images/placeholder_motsuni.png",
-          "featured": true
-        },
-        {
-          "id": "karaage",
-          "name": {
-            "ja": "唐揚げ",
-            "en": "Karaage (Japanese Fried Chicken)",
-            "zh-TW": "日式炸雞",
-            "ko": "가라아게"
-          },
-          "description": {
-            "ja": "外はカリッと、中はジューシー。ビールによく合います。",
-            "en": "Crispy outside, juicy inside — perfect with a cold beer.",
-            "zh-TW": "外酥內多汁，配啤酒剛剛好。",
-            "ko": "겉은 바삭, 속은 촉촉. 맥주와 잘 어울립니다."
-          },
-          "price": null,
-          "image": "/images/placeholder_karaage.png",
-          "featured": true
-        },
-        {
-          "id": "daily-special",
-          "name": {
-            "ja": "日替わりの一品",
-            "en": "Daily Specials",
-            "zh-TW": "每日限定料理",
-            "ko": "오늘의 요리"
-          },
-          "description": {
-            "ja": "その日のおすすめはInstagramでお知らせしています。",
-            "en": "Check our Instagram for today's specials.",
-            "zh-TW": "當日推薦請見 Instagram。",
-            "ko": "오늘의 추천 메뉴는 인스타그램에서 확인하세요."
-          },
-          "price": null
-        }
-      ]
+      "items": []
     },
     {
       "id": "drinks",
-      "items": [
-        {
-          "id": "draft-beer",
-          "name": {
-            "ja": "生ビール",
-            "en": "Draft Beer",
-            "zh-TW": "生啤酒",
-            "ko": "생맥주"
-          },
-          "price": null,
-          "image": "/images/placeholder_beer.png"
-        },
-        {
-          "id": "highball",
-          "name": {
-            "ja": "ハイボール",
-            "en": "Highball",
-            "zh-TW": "Highball（威士忌蘇打）",
-            "ko": "하이볼"
-          },
-          "price": null
-        },
-        {
-          "id": "taruhai-lemon",
-          "name": {
-            "ja": "タルハイレモン",
-            "en": "Taru-hai Lemon (Draft Lemon Sour)",
-            "zh-TW": "樽Hi檸檬沙瓦",
-            "ko": "타루하이 레몬(레몬 사와)"
-          },
-          "price": null
-        }
-      ]
+      "items": []
     }
   ]
 }

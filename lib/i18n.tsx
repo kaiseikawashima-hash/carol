@@ -12,13 +12,12 @@ import {
 import i18n from "@/data/i18n.json";
 import type { Lang, LocalizedText } from "@/lib/types";
 
-export const LANGS = ["ja", "en", "zh-TW", "ko"] as const;
+export const LANGS = ["ja", "en", "ko"] as const;
 
 /** 言語切替スイッチャーに表示するラベル(その言語自身の表記で固定) */
 export const LANG_LABELS: Record<Lang, string> = {
   ja: "日本語",
   en: "English",
-  "zh-TW": "繁體中文",
   ko: "한국어",
 };
 
@@ -36,7 +35,6 @@ function detectBrowserLang(): Lang {
   const nav = window.navigator.language.toLowerCase();
   if (nav.startsWith("en")) return "en";
   if (nav.startsWith("ko")) return "ko";
-  if (nav.startsWith("zh")) return "zh-TW";
   return FALLBACK_LANG;
 }
 

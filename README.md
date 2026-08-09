@@ -1,7 +1,7 @@
 # 食酒房 客炉留（キャロル）公式ランディングページ
 
-静岡県富士宮市の和風居酒屋「食酒房 客炉留（きゃくろとめ／通称：キャロル）」の1ページ完結のホームページです。
-日本語・英語・繁体字中国語・韓国語の4言語に対応しています。
+静岡県富士宮市の創作居酒屋「食酒房 客炉留（キャロル）」の1ページ完結のホームページです。
+日本語・英語・韓国語の3言語に対応しています。
 
 - 技術構成: Next.js (App Router) + TypeScript + Tailwind CSS
 - ホスティング: Vercel（無料プランでOK）
@@ -50,11 +50,13 @@ npm run dev
 | 地図の位置 | `geo` と `links` 内のURL（緯度,経度を書き換え） |
 
 営業時間・定休日などの**文章**は多言語のため **`data/i18n.json`** にあります。
-`info.hoursValue` / `info.closedValue` を4言語（ja / en / zh-TW / ko）ぶん書き換えてください。
+`info.hoursValue` / `info.closedValue` を3言語（ja / en / ko）ぶん書き換えてください。
 
 ## 4. メニュー（特にドリンク）の追加方法
 
-**`data/menu.json`** だけ編集すればページに反映されます。
+当店は固定のグランドメニューを持たず、その日の仕入れでいちばん良い料理を出すスタイルのため、
+現在 `data/menu.json` の `items` はすべて空にしてあり、画面にはモットー訴求のコピーが表示されています。
+実際のメニュー（特にドリンク）が決まり次第、**`data/menu.json`** を編集すれば自動で一覧表示に切り替わります。
 「お飲み物」（`"id": "drinks"`）の `items` に、次の形をコピーして追加します。
 
 ```json
@@ -63,7 +65,6 @@ npm run dev
   "name": {
     "ja": "レモンサワー",
     "en": "Lemon Sour",
-    "zh-TW": "檸檬沙瓦",
     "ko": "레몬 사와"
   },
   "price": 450
@@ -94,10 +95,10 @@ npm run dev
 | ファイル | 使われている場所 | 推奨サイズ・比率 |
 |---|---|---|
 | `placeholder_hero.png` | トップの背景・SNSシェア画像 | 横長 1536×1024 以上 |
-| `placeholder_hamburg.png` | 自慢の一品（煮込みハンバーグ） | 4:3（1024×768 以上） |
-| `placeholder_motsuni.png` | 自慢の一品（モツ煮） | 4:3 |
-| `placeholder_karaage.png` | 自慢の一品（唐揚げ） | 4:3 |
-| `placeholder_beer.png` | メニュー（生ビール、現在は未表示・予備） | 正方形 |
+| `placeholder_hamburg.png` | 自慢の一品用の予備画像（現在メニュー未掲載のため未使用。`data/menu.json` に写真つきメニューを追加すると使える） | 4:3（1024×768 以上） |
+| `placeholder_motsuni.png` | 同上（未使用の予備画像） | 4:3 |
+| `placeholder_karaage.png` | 同上（未使用の予備画像） | 4:3 |
+| `placeholder_beer.png` | 同上（未使用の予備画像） | 正方形 |
 | `placeholder_fujisan.png` | お店について（富士山の風景） | 横長 3:2 |
 
 ファイル名を変えたい場合は `data/menu.json` の `image` と `components/Hero.tsx` / `app/layout.tsx` 内のパスも合わせて変更します。
@@ -109,16 +110,11 @@ npm run dev
 
 | 項目 | 現在の仮の値 | 更新する場所 |
 |---|---|---|
-| 営業時間 | 18:00〜24:00（2013年頃の情報） | `data/i18n.json` → `info.hoursValue`（4言語） |
-| 定休日 | 日曜・祝日（同上） | `data/i18n.json` → `info.closedValue`（4言語） |
-| 席数・個室・貸切 | 未掲載 | 確定後 `components/ShopInfo.tsx` に行を追加 |
-| 駐車場 | 「お電話でご確認ください」と表示中 | `data/i18n.json` → `access.routes`（4言語） |
+| 席数・個室 | 未掲載 | 確定後 `components/ShopInfo.tsx` に行を追加 |
+| 駐車場 | 「お電話でご確認ください」と表示中 | `data/i18n.json` → `access.routes`（3言語） |
 | 予算感 | 未掲載 | 確定後 `components/JsonLd.tsx` の `priceRange` にも追加 |
 | 各メニューの価格 | すべて非表示（`null`） | `data/menu.json` → 各 `price` |
-| 駅からの徒歩分数 | 「10〜15分ほど（目安）」 | `data/i18n.json` → `access.routes`（4言語） |
-| 浅間大社からの徒歩分数 | 「10分ほど（目安）」 | 同上 |
-| 車での所要時間 | 「約15〜20分（目安）」 | 同上 |
-| 営業時間の構造化データ | 未設定 | 確定後 `components/JsonLd.tsx` に `openingHoursSpecification` を追加 |
+| 車での所要時間 | 「約15〜20分（目安）」 | `data/i18n.json` → `access.routes`（3言語） |
 
 ## フォルダ構成
 
@@ -128,7 +124,7 @@ components/     各セクション（Hero, Menu, Access など）
 data/           ★ふだん編集するのはここ
   site.json     店舗の基本情報
   menu.json     料理・ドリンク
-  i18n.json     4言語の文章
+  i18n.json     3言語の文章
 lib/            言語切替のしくみ・型定義
 public/images/  写真（placeholder_〜 は仮画像）
 ```

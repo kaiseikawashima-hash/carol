@@ -10,7 +10,8 @@ const menu = menuData as MenuData;
 
 /**
  * お品書き。data/menu.json を編集するだけで反映される。
- * 「お飲み物」カテゴリの枠は最初から用意してあり、items に追記すれば増える。
+ * 固定メニューを持たないため items は現在空。カテゴリの枠だけ用意してあり、
+ * 実際のメニュー(特にドリンク)が決まり次第 items に追記すれば一覧表示に切り替わる。
  */
 export default function MenuSection() {
   const { t } = useI18n();

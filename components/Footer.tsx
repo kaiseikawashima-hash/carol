@@ -10,11 +10,11 @@ export default function Footer() {
 
   return (
     <footer className="bg-sumi px-6 py-14 text-center text-washi/75">
-      <p className="font-mincho text-xl font-semibold tracking-[0.2em] text-washi">
+      <p className="font-mincho text-xl font-semibold tracking-[0.2em] text-washi break-keep">
         食酒房 客炉留
       </p>
-      <p className="mt-2 text-xs tracking-[0.25em] text-washi/60">
-        {site.reading} / {site.aliasRomaji}
+      <p className="mt-2 text-xs tracking-[0.25em] text-washi/60 break-keep">
+        {site.alias} / {site.aliasRomaji}
       </p>
       <p className="mt-5 text-sm">{t("footer.tagline")}</p>
       <p className="mt-2 text-xs leading-relaxed">

@@ -42,10 +42,9 @@ export default function ShopInfo() {
         </a>
       ),
     },
-    // TODO: 要確認 — 営業時間・定休日は2013年頃の参考値(18:00〜24:00 / 日曜・祝日)。
-    // 確定後は data/i18n.json の info.hoursValue / info.closedValue を全言語ぶん更新する。
     { label: t("info.rows.hours"), value: t("info.hoursValue") },
     { label: t("info.rows.closed"), value: t("info.closedValue") },
+    { label: t("info.rows.charter"), value: t("info.charterValue") },
     { label: t("info.rows.station"), value: t("info.stationValue") },
   ];
 
@@ -65,7 +64,7 @@ export default function ShopInfo() {
             ))}
           </dl>
           <p className="mt-4 text-xs leading-relaxed text-sumi-light/80">{t("info.note")}</p>
-          {/* TODO: 要確認 — 席数・個室・貸切可否・駐車場・予算感が確定したら行を追加する */}
+          {/* TODO: 要確認 — 席数・個室・駐車場・予算感が確定したら行を追加する */}
         </FadeIn>
       </div>
     </section>

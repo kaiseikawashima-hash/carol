@@ -17,10 +17,10 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 bg-sumi/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <a href="#top" className="flex items-baseline gap-2 text-washi">
-          <span className="font-mincho text-lg font-semibold tracking-widest sm:text-xl">
+          <span className="font-mincho text-lg font-semibold tracking-widest whitespace-nowrap sm:text-xl">
             客炉留
           </span>
-          <span className="text-[10px] tracking-[0.25em] text-washi/70 sm:text-xs">
+          <span className="text-[10px] tracking-[0.25em] text-washi/70 whitespace-nowrap sm:text-xs">
             CAROL
           </span>
         </a>

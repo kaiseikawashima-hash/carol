@@ -4,7 +4,7 @@ import { useI18n } from "@/lib/i18n";
 import FadeIn from "@/components/FadeIn";
 import site from "@/data/site.json";
 
-/** Instagram導線。日替わりメニューの発信元としてフォローを促す */
+/** Instagram導線。営業状況や店内の様子の発信元としてフォローを促す */
 export default function InstagramCta() {
   const { t } = useI18n();
 

@@ -21,9 +21,9 @@ const notoSansJp = Noto_Sans_JP({
 // TODO: Vercel デプロイ後、環境変数 NEXT_PUBLIC_SITE_URL に本番URLを設定する(README参照)
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
-const title = "食酒房 客炉留（キャロル）｜富士宮・浅間大社近くの和風居酒屋";
+const title = "食酒房 客炉留（キャロル）｜富士宮・浅間大社近くの創作居酒屋";
 const description =
-  "静岡県富士宮市の和風居酒屋「食酒房 客炉留（きゃくろとめ／キャロル）」。煮込みハンバーグ、お通しのモツ煮、唐揚げと気取らないお酒。富士山本宮浅間大社のすぐ近く、友達の家のようにくつろげるお店です。";
+  "静岡県富士宮市の創作居酒屋「食酒房 客炉留（キャロル）」。その日の仕入れでいちばんの一皿をお出しします。がっつり飲んで食べるのも、ひとりでふらっと軽く一杯・軽くつまむのもOK。富士山本宮浅間大社のすぐ近く、友達の家のようにくつろげるお店です。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
