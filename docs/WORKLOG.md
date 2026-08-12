@@ -75,6 +75,14 @@ Codex CLI（imagegenスキル / gpt-5.5）で生成し `public/images/placeholde
 
 - `npm run build` 成功（全ルート静的生成）/ ESLint エラー0
 - 4言語の辞書キー構造・メニュー翻訳・住所翻訳の整合性を機械チェックで確認（ALL PASS）
+
+## 6. 追記（2026-08-12）— ヒーロー画像を実写に差し替え
+
+- `placeholder_hero.png` を、店内カウンター席の実写（縦長 941×1672）で同名上書き。ファイル名は変更していない（README第6章の運用どおり）
+- `app/layout.tsx` の OGP画像 `width`/`height` を実際の寸法（941×1672）に更新
+- `data/i18n.json` の `hero.imageAlt`（日/英/韓）を実写内容に合わせて修正（旧文言は生成イメージ由来の「提灯」を含んでいたため）
+- Hero.tsx は `fill` + `object-cover` のためコード変更なし。縦長写真とモバイル表示（縦長ビューポート）のアスペクト比が近く、スマホでは写真がほぼ全体表示される。デスクトップ幅では写真の中央帯（カウンター〜のれん〜棚のあたり）が表示される
+- Playwright (`npx playwright screenshot`) でモバイル(390×844)・デスクトップ(1440×900)を実機確認済み
 - 本番サイトで確認済み: ページ・全6画像が200 / OGPが本番URLで出力 / JSON-LD出力 / `tel:` リンク / Instagramリンク / Googleマップ埋め込み・リンク
 
 ## 6. コミット・デプロイ履歴

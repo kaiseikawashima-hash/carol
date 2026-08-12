@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/placeholder_hero.png",
-        width: 1536,
-        height: 1024,
+        width: 941,
+        height: 1672,
         alt: "食酒房 客炉留（キャロル）店内イメージ",
       },
     ],
