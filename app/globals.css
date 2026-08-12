@@ -33,6 +33,11 @@ body {
   font-family: var(--font-gothic);
   /* 和紙のごく薄い質感(SVGノイズ)。重い画像を使わずに紙の風合いを出す */
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.4 0 0 0 0 0.3 0 0 0 0.04 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+  /* 日本語/韓国語が単語の途中で改行されるのを防ぐ(禁則処理)。幅が足りない場合のみ overflow-wrap でフォールバック */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  /* 句点(。)や読点(、)だけが行頭に孤立するのを防ぐ */
+  line-break: strict;
 }
 
 ::selection {
